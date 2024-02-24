@@ -1,0 +1,128 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+	overflow-x: hidden;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	text-decoration: none;
+	line-height: 1.2;
+}
+
+button:focus,
+textarea:focus,
+select:focus {
+	outline: none !important;
+	-webkit-appearance: none;
+	box-shadow: none;
+}
+
+input:focus {
+	outline: none !important;
+}
+
+a:active,
+a:focus {
+	outline: 0;
+	outline: none !important;
+	-moz-outline-style: none;
+}
+
+button {
+	border: none;
+}
+
+a,
+img,
+span,
+input,
+textarea,
+button,
+svg,
+path,
+circle {
+	transition: .3s all ease;
+}
+
+.header{
+    background: #434242;
+    border-top: 4px solid #809E26;
+}
+.header .header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 8px 0 12px 0; */
+    gap: 20px;
+}
+.header-content .header__navs{
+    display: flex;
+    align-items: center;
+}
+.header-content .header-nav__link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: rgb(254, 254, 254);
+    font-size: 15.97px;
+    line-height: 19px;
+    padding: 22px 14px 26px;
+}
+.header-content .header-nav__link::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: rgb(113, 137, 38);
+    opacity: 0;
+    transition: .3s ease all;
+}
+.header-content .header-nav__link:focus::before{
+    opacity: 1;
+}
+.header-content .header-phone{
+    background: rgb(128, 158, 38);
+    padding: 5px 26px 8px;
+    color: rgb(254, 254, 254);
+    font-size: 16px;
+    line-height: 19px;
+}
+.header-content .header-nav__buy{
+    position: relative;
+}
+.header-nav__buy .header-buy-wrap{
+    position: absolute;
+    left: 60%;
+    background-image: url(../images/icon/header-buy-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding-top: 20px;
+    width: 123.81px;
+    height: 73.29px;
+    opacity: 0;
+    transition: .3s ease all;
+    pointer-events: none;
+}
+.header-content .header-nav__link:focus+.header-buy-wrap{
+    opacity: 1;
+    pointer-events: all;
+}
