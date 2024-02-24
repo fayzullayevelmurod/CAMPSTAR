@@ -40,6 +40,9 @@ a:focus {
 	outline: none !important;
 	-moz-outline-style: none;
 }
+a:hover{
+    color: #FFF;
+}
 
 button {
 	border: none;
@@ -57,6 +60,14 @@ circle {
 	transition: .3s all ease;
 }
 
+.main-btn{
+    color: rgb(254, 254, 254);
+    font-size: 18.96px;
+    line-height: 23px;
+    background: rgb(128, 158, 38);
+}
+
+/* Header start */
 .header{
     background: #434242;
     border-top: 4px solid #809E26;
@@ -65,7 +76,6 @@ circle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 8px 0 12px 0; */
     gap: 20px;
 }
 .header-content .header__navs{
@@ -76,10 +86,12 @@ circle {
     position: relative;
     display: flex;
     align-items: center;
+    gap: 4px;
     color: rgb(254, 254, 254);
     font-size: 15.97px;
     line-height: 19px;
     padding: 22px 14px 26px;
+    white-space: nowrap;
 }
 .header-content .header-nav__link::before{
     content: '';
@@ -100,6 +112,7 @@ circle {
     padding: 5px 26px 8px;
     color: rgb(254, 254, 254);
     font-size: 16px;
+    white-space: nowrap;
     line-height: 19px;
 }
 .header-content .header-nav__buy{
@@ -108,6 +121,7 @@ circle {
 .header-nav__buy .header-buy-wrap{
     position: absolute;
     left: 60%;
+    z-index: 5;
     background-image: url(../images/icon/header-buy-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,3 +140,72 @@ circle {
     opacity: 1;
     pointer-events: all;
 }
+/* Header end */
+
+/* Home start */
+.home{
+    position: relative;
+}
+.home-slider .swiper-wrapper{
+    padding: 0;
+    margin: 0;
+}
+.home-slider .home-slider-img img{
+    width: 100%;
+}
+.home-slider .swiper-slide{
+    height: 100%;
+}
+.home-slider .swiper-slide .container{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.home-slider .home-slider-content{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 106px;
+}
+.home-slider-content .home-slider-title h1{
+    color: rgb(254, 254, 254);
+    font-size: 57.71px;
+    line-height: 55px;
+    margin-bottom: 2px;
+}
+.home-slider-content .home-slider-title h2{
+    color: rgb(254, 254, 254);
+    font-size: 38.58px;
+    line-height: 47px;
+}
+.home-slider-content .home-slider-btn{
+    width: 225.74px;
+    height: 50.89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-slider .swiper-pagination {
+    bottom: 56px;
+}
+.home-slider .home-rus-img{
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background-image: url(../images/icon/pagination-icon.svg);
+    background-size: contain;
+    border-radius: 0;
+    background-color: transparent;
+    width: 22px;
+    opacity: 1;
+    height: 21px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+    background-image: url(../images/icon/pagination-icon-active.svg);
+    background-size: contain;
+}
+/* Home end */
