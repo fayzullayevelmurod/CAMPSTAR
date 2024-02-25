@@ -657,6 +657,7 @@ input[type="checkbox"] {
     color: #434242;
     font-size: 14.14px;
     line-height: 17px;
+    margin-top: -3px;
 }
 .contact-form-bottom .contact-form-check label a{
     color: #809e26;
@@ -748,6 +749,7 @@ input::-webkit-inner-spin-button {
     color: #434242;
     font-size: 24px;
     line-height: 29px;
+    white-space: nowrap;
 }
 .product-slide .product-slide-text p span{
     width: 180px;
@@ -918,7 +920,6 @@ input::-webkit-inner-spin-button {
     padding-bottom: 93px;
 }
 .product-cards .catalog-card__info .catalog__card-title {
-    gap: 13px;
     padding: 10px 21px 6px 21px;
     gap: 9px;
 }
@@ -1146,6 +1147,7 @@ input::-webkit-inner-spin-button {
     font-family: "Montserrat", sans-serif;
     font-size: 14.33px;
     line-height: 17px;
+    margin-top: -3px;
 }
 .form-group-wrap .form__check label a{
     color: rgb(128, 158, 38);
@@ -1284,7 +1286,9 @@ input::-webkit-inner-spin-button {
     .contact-form .contact-form-bottom{
         flex-direction: column;
     }
-    .contact-info form{
+    .contact-info form,
+    .product-cards .catalog-card .catalog-card__slide,
+    .catalog-card .catalog-card__info{
         width: 100%;
     }
     .contact-content .contact-info {
@@ -1292,6 +1296,16 @@ input::-webkit-inner-spin-button {
     }
     .contact-info .contact-form {
         padding-right: 33px;
+    }
+    .form-table .character{
+        display: none;
+    }
+    .form-sec .form-group-wrap{
+        margin-top: 55px;
+    }
+
+    .product-cards .catalog-content .catalog-card{
+        flex-direction: column;
     }
 }
 
@@ -1332,6 +1346,7 @@ input::-webkit-inner-spin-button {
     .company-content .company-img,
     .production-content .production-img{
         height: 312px;
+        object-fit: cover;
     }
     .company-content .company-title-wrap{
         flex-direction: row-reverse;
@@ -1347,6 +1362,19 @@ input::-webkit-inner-spin-button {
     .footer .footer-content{
         justify-content: center;
     }
+
+    .product-slide .product-slide-title{
+        display: flex;
+    }
+    .product-info .product-info-title{
+        display: none;
+    }
+    .product .product-info{
+        margin-top: 17px;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    
 }
 
 @media only screen and (max-width: 576px){
@@ -1487,7 +1515,7 @@ input::-webkit-inner-spin-button {
         padding: 16px 0px 60px;
     }
     .thanks .thanks-content {
-        padding: 49px 48px 48px 48px;
+        padding: 49px 20px 48px 20px;
         gap: 3px;
     }
     .thanks-content .thanks-title{
@@ -1495,6 +1523,161 @@ input::-webkit-inner-spin-button {
         font-size: 31.93px;
         line-height: 39px;
     }
+    .thanks-content .thanks-text {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .form-sec{
+        padding-bottom: 64px;
+    }
+    .form-table tbody .table-price,
+    .form-table tbody .table-price2 {
+        padding: 0;
+    }
+    .form-table tbody .table-price2{
+        text-align: center;
+    }
+
+    .form-table thead th {
+        padding: 4px 6px 5px;
+        font-size: 10.46px;
+    }
+    .form-table td span{
+        font-size: 9.41px;
+        line-height: 11px;
+    }
+    .form-table td p{
+        font-size: 8.97px;
+        line-height: 11px;
+    }
+    .form-table .table-img-wrap img{
+        width: 49px;
+        height: 35px;
+    }
+    .form-table .form-total span{
+        font-size: 17px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+    }
+    .form-total .form-total-price{
+        justify-content: end;
+    }
+    .form-group-wrap .form-group-title p {
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .form-group .form-inp-group input, .form-group textarea {
+        font-size: 15px;
+        line-height: 19px;
+        padding: 12px 14px 13px;
+    }    
+    .form-group .form-inp-group{
+        gap: 11px;
+    }
+    .form-group-wrap .form-group{
+        gap: 47px;
+        margin-bottom: 9px;
+    }
+    .form-group-wrap .form-group-btn {
+        height: 50px;
+        padding: 9px 30px 15px;
+        font-size: 21px;
+        line-height: 26px;
+    }
+
+
+    .product {
+        padding-bottom: 20px;
+    }
+    .none-breadcrumb-item{
+        display: none;
+    }
+    .product-slide .productSlide .swiper-slide{
+        height: 110px;
+    }
+    .product-slide .product-slide-text p span{
+        width: 110px;
+    }
+    .product-character .product-character-title,
+    .product-cards .product-title,
+    .description .description-title{
+        font-size: 26px;
+        font-weight: 400;
+    }
+    .product .description {
+        margin-top: 34px;
+    }
+    .description .description-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .product-cards .product-title-wrap{
+        padding-left: 0;
+    }
+    .product-cards{
+        padding-bottom: 43px;
+    }
+    .product-cards .catalog-card__info .catalog__card-title {
+        padding: 7px 13px 5px 13px;
+        gap: 6px;
+    }
+    .product-cards .catalog__card-title h3 {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .product-cards .catalog__card-title p {
+        font-size: 6px;
+        line-height: 8px;
+        gap: 5px;
+    }
+    .product-cards .catalog-card__info .catalog-card__item {
+        gap: 4px;
+        padding: 1px 13px 3px;
+    }
+    .product-cards .catalog-card__item span{
+        font-size: 6px;
+        line-height: 8px;
+    }
+    .product-cards .catalog-card__item img{
+        width: 5px;
+        height: 5px;
+    }
+    .product-cards .catalog-card__info .catalog-card__link {
+        padding: 7px 16px 9px 14px;
+    }
+    .catalog-card__info .catalog-card__link a {
+        height: 22px;
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .product-cards .catalog-card .catalog-card__slide {
+        padding: 16px 2px 0px 2px;
+        height: 128px;
+    }
+    .product-cards .catalog-card .swiper-slide img {
+        height: 73px;
+        width: 85%;
+    }
+    .product-cards .catalog-card .swiper-slide .catalog-img1 {
+        width: 68%;
+        height: 70px;
+    }
+    .product-cards .catalog-card .catalog-card__slide .swiper {
+        height: 112px;
+    }
+    .product-cards .catalog-card .swiper-button-prev img, 
+    .product-cards .catalog-card .swiper-button-next img {
+        width: 7px;
+        height: 23px;
+    }
+    .product-cards .catalog-card .swiper-pagination-clickable .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin-bottom: 9px;
+    }
+
 
 
     .footer .footer-content{
