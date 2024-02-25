@@ -2,6 +2,7 @@
 
 // Home sldie
 var homeSlide = new Swiper(".homeSlide", {
+    loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -20,5 +21,40 @@ var catalogSlide = new Swiper(".catalogSlide", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+});
+
+// Catalog wrap slide
+var catalogWrapSlide = new Swiper(".catalogWrapSlide", {
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+// Product slide
+var productSlide = new Swiper(".productSlide", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    clickable: true,
+});
+var productSlide2 = new Swiper(".productSlide2", {
+    spaceBetween: 100,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: productSlide,
     },
 });
