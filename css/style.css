@@ -115,7 +115,6 @@ circle {
     opacity: 0;
     transition: .3s ease all;
 }
-.header .header-nav__link:focus::before,
 .header .header-nav__link:hover::before{
     opacity: 1;
 }
@@ -153,7 +152,8 @@ circle {
     transition: .3s ease all;
     pointer-events: none;
 }
-.header-content .header-nav__link:focus+.header-buy-wrap{
+.header-content .header-nav__link:hover+.header-buy-wrap,
+.header-nav__buy .header-buy-wrap:hover{
     opacity: 1;
     pointer-events: all;
 }
