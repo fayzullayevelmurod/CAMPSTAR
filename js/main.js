@@ -1,4 +1,16 @@
+// Header menu
+$(document).ready(function () {
+    $(".menu-open").click(function () {
+        $(".header-mob").addClass("active");
+    });
 
+    $(".menu-close").click(function () {
+        $(".header-mob").removeClass("active");
+    });
+    $(".header-mob-bg").click(function () {
+        $(".header-mob").removeClass("active");
+    });
+});
 
 // Home sldie
 var homeSlide = new Swiper(".homeSlide", {

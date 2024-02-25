@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" media="screen">
     <!-- Swiper css -->
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Font -->
     <link rel="stylesheet" type="text/css" href="font/inter/stylesheet.css" media="screen">
     <!-- Style css -->
@@ -17,7 +19,7 @@
     <div class="wrapper">
         <!-- Header start -->
         <header class="header">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="header-content">
                     <a href="#!" class="logo"><img src="images/logo.svg" alt=""></a>
                     <div class="header__navs">
@@ -34,9 +36,33 @@
                         </div>
                         <a href="#!" class="header-nav__link">Контакты</a>
                     </div>
-                    <a href="#!" class="header-phone">Обратный звонок</a>
+                    <div class="header-contact">
+                        <a href="#!" class="header-phone"><img src="images/icon/phone.svg" alt=""> <span>Обратный звонок</span></a>
+                        <button class="menu-open"><img src="images/icon/bars.svg" alt=""></button>
+                    </div>
                 </div>
             </div>
+
+            <div class="header-mob">
+                <div class="header-mob-content">
+                    <button class="menu-close"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="header__navs">
+                        <a href="#!" class="header-nav__link"><img src="images/icon/catalog-icon.svg" alt="">Каталог</a>
+                        <a href="#!" class="header-nav__link">О компании</a>
+                        <a href="#!" class="header-nav__link">Производство</a>
+                        <a href="#!" class="header-nav__link">Прайс-лист</a>
+                        <div class="header-nav__buy">
+                            <a href="#!" class="header-nav__link">Купить в розницу</a>
+                            <div class="header-buy-wrap">
+                                <a href="#!" class="header-buy-link"><img src="images/icon/header-buy-icon1.svg" alt=""></a>
+                                <a href="#!" class="header-buy-link"><img src="images/icon/header-buy-icon2.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <a href="#!" class="header-nav__link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mob-bg"></div>
         </header>
         <!-- Header end -->
 
@@ -120,7 +146,7 @@
                     <h1 class="catalog-title">КАТАЛОГ</h1>
                     </div>
                 </div>
-                <div class="container-xxl">
+                <div class="container-fluid">
                     <div class="catalog-content">
                         <div class="row">
                             <div class="col-12 col-lg-6">
@@ -337,8 +363,9 @@
 
             <!-- Company start -->
             <section class="company">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="company-content">
+                        <img src="images/company-bg.png" alt="" class="company-img">
                         <div class="company-title-wrap">
                             <div class="company-line"></div>
                             <h1 class="company-title">О КОМПАНИИ</h1>
@@ -359,6 +386,7 @@
                         </div>
                     </div>
                     <div class="production-content">
+                        <img src="images/production-bg.png" alt="" class="production-img">
                         <div class="company-title-wrap">
                             <h1 class="company-title">ПРОИЗВОДСТВО</h1>
                             <div class="company-line"></div>
@@ -387,7 +415,7 @@
 
             <!-- Contact start -->
             <section class="contact">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="contact-content">
                         <div class="contact-title">
                             <h1><b>CAMPSTAR</b> — ВАШ НАДЕЖНЫЙ СПУТНИК  В ЛЮБОМ ПРИКЛЮЧЕНИИ!</h1>
@@ -402,7 +430,7 @@
                                     </div>
                                     <div class="contact-form-bottom">
                                         <div class="contact-form-check">
-                                            <input type="checkbox" id="contactCheck" class="contact-check-inp" required>
+                                            <input type="checkbox" id="contactCheck" class="contact-check-inp" required checked>
                                             <label for="contactCheck">Нажимая на кнопку, ты соглашаешься на обработку <a href="#!">персональных данных</a></label>
                                         </div>
                                         <button class="contact-form-btn main-btn" type="submit">Отправить заявку <img src="images/icon/btn-arrow.svg" alt=""></button>
@@ -422,7 +450,7 @@
         </main>
 
         <footer class="footer">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="footer-content">
                     <div class="footer-logo">
                         <a href="#!"><img src="images/icon/footer-logo.svg" alt=""></a>

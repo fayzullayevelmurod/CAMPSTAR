@@ -62,6 +62,7 @@ circle {
 }
 .container-fluid{
     max-width: 1395px;
+    overflow-y: hidden;
 }
 
 .main-btn{
@@ -89,7 +90,7 @@ circle {
     display: flex;
     align-items: center;
 }
-.header-content .header-nav__link{
+.header .header-nav__link{
     position: relative;
     display: flex;
     align-items: center;
@@ -99,8 +100,9 @@ circle {
     line-height: 19px;
     padding: 22px 14px 26px;
     white-space: nowrap;
+    max-width: max-content;
 }
-.header-content .header-nav__link::before{
+.header .header-nav__link::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -111,18 +113,24 @@ circle {
     opacity: 0;
     transition: .3s ease all;
 }
-.header-content .header-nav__link:focus::before{
+.header .header-nav__link:focus::before,
+.header .header-nav__link:hover::before{
     opacity: 1;
 }
 .header-content .header-phone{
     background: rgb(128, 158, 38);
     padding: 5px 26px 8px;
+}
+.header-content .header-phone span{
     color: rgb(254, 254, 254);
     font-size: 16px;
-    white-space: nowrap;
     line-height: 19px;
+    white-space: nowrap;
 }
-.header-content .header-nav__buy{
+.header  .header-phone img{
+    display: none;
+}
+.header .header-nav__buy{
     position: relative;
 }
 .header-nav__buy .header-buy-wrap{
@@ -146,6 +154,62 @@ circle {
 .header-content .header-nav__link:focus+.header-buy-wrap{
     opacity: 1;
     pointer-events: all;
+}
+.header .header-contact{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header .menu-open{
+    background-color: transparent;
+    display: none;
+}
+.header .menu-close{
+    background-color: transparent;
+    font-size: 30px;
+    color: #809e26;
+    margin-left: auto;
+    display: flex;
+}
+.header .header-mob{
+    padding: 15px 20px 80px;
+    position: fixed;
+    z-index: 10;
+    overflow-x: auto;
+    top: 0;
+    right: -250%;
+    width: 50%;
+    height: 100vh;
+    background-color: #434242;
+    border-radius: 100%;
+    transition: .5s ease all;
+}
+
+.header .header-mob.active{
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+.header .header-mob.active + .header-mob-bg{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #2b2929b3;
+    position: fixed;
+    z-index: 9;
+}
+.header-mob .header__navs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.header-mob .header-nav__link {
+    padding: 30px 14px 14px;
+}
+.header-mob .header-nav__link::before{
+    height: 10px;
 }
 /* Header end */
 
@@ -186,7 +250,10 @@ circle {
     margin: 0;
 }
 .home-slider .home-slider-img img{
-    width: 100%;
+    width: 103%;
+    height: 566px;
+    margin-left: -2px;
+    object-fit: cover;
 }
 .home-slider .swiper-slide{
     height: 100%;
@@ -434,22 +501,28 @@ circle {
 
 /* Company start */
 .company .company-content{
-    background-image: url(../images/company-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 35px 26px 98px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 53px;
+    position: relative;
     margin-bottom: 21px;
+}
+.company-content .company-img{
+    width: 100%;
+    height: 588px;
 }
 .company-content .company-title-wrap,
 .production-content .company-title-wrap{
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 13px;
-    width: 100%;
+    width: 96%;
+}
+.company-content .company-title-wrap{
+    top: 35px;
+    right: 48px;
+}
+.production-content .company-title-wrap{
+    top: 24px;
+    left: 48px;
 }
 .company-content .company-line,
 .production-content .company-line{
@@ -471,6 +544,11 @@ circle {
     flex-direction: column;
     gap: 20px;
 }
+.company-content .company-texts{
+    position: absolute;
+    top: 128px;
+    right: 33px;
+}
 .company-content .company-text,
 .production-content .company-text{
     color: #fefefe;
@@ -478,22 +556,36 @@ circle {
     line-height: 23px;
 }
 
+
 .company .production-content{
-    background-image: url(../images/production-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    margin-bottom: 21px;
+}
+.production-content .production-img{
+    width: 100%;
+    height: 588px;
+}
+.production-content .production-info{
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 24px 0 66px 48px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 53px;
-    margin-bottom: 21px;
+    width: 100%;
 }
 .production-content .company-texts{
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 615px;
+}
+.production-content .company-texts{
+    position: absolute;
+    top: 94px;
+    left: 50px;
 }
 /* Company end */
 
@@ -542,7 +634,7 @@ circle {
 .contact-form .contact-form-bottom{
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 28px;
 }
 .contact-form-bottom .contact-form-check{
     display: flex;
@@ -578,6 +670,7 @@ input[type="checkbox"] {
     white-space: nowrap;
     width: 242px;
     height: 45px;
+    padding: 0px 10px;
 }
 
 .contact-info .contact-download .contact-download-link{
@@ -683,6 +776,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 100%;
     border: 0.5px solid rgb(197, 198, 198);
+    cursor: pointer;
 }
 .product-slide .productSlide .swiper-slide-thumb-active img{
     border: 0.5px solid rgb(128, 158, 38);
@@ -897,6 +991,174 @@ input::-webkit-inner-spin-button {
 }
 /* Product cards end */
 
+/* Form sec start */
+.table, tbody, thead, td, th{
+    border: none;
+    margin: 0;
+}
+.table>:not(:first-child) {
+    border-top: 0;
+}
+.form-sec{
+    padding-bottom: 85px;
+}
+.form-table thead th{
+    padding: 6px 7px 7px;
+    border: 0.76px solid #fefefe;
+    background: #809e26;
+    text-align: center;
+    color: #fefefe;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13.09px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.form-table td{
+    border: 0.76px solid rgb(197, 198, 198);
+}
+.form-table .table-img-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+.form-table td span{
+    color: #434242;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11.76px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.form-table .form-table-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 1.79px;
+}
+.form-table td p{
+    color: rgb(67, 66, 66);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+.form-table tbody .table-color,
+.form-table tbody .table-price,
+.form-table tbody .table-order{
+    text-align: center;
+}
+.form-table tbody .table-price{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.form-table tbody .table-price2{
+    text-align: end;
+    padding-right: 9px;
+}
+
+.form-table .form-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-table .form-total span{
+    height: 45.2px;
+    color: rgb(254, 254, 254);
+    font-family: "Montserrat", sans-serif;
+    font-size: 22.43px;
+    padding: 8px 16px 10px 12px;
+    line-height: 27px;
+}
+.form-total .form-total-text{
+    border: 0.76px solid rgb(254, 254, 254);
+    background: rgb(67, 66, 66);
+    width: 60%;
+}
+.form-total .form-total-price{
+    border: 0.76px solid rgb(254, 254, 254);
+    background: rgb(128, 158, 38); 
+    width: 40%; 
+    text-align: end;
+}
+
+.form-sec .form-group-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.form-group-wrap .form-group-title{
+    background: #434242;
+    padding: 7px 12px 12px;
+    width: 100%;
+    border: 0.76px solid #fefefe;
+    margin-bottom: 16px;
+}
+.form-group-wrap .form-group-title p{
+    text-align: center;
+    color: #fefefe;
+    font-family: "Montserrat", sans-serif;
+    font-size: 21.84px;
+    line-height: 27px;
+}
+.form-group-wrap .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    margin-bottom: 20px;
+}
+.form-group .form-inp-group{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+.form-group .form-inp-group input,
+.form-group textarea{
+    border: 1.89px solid #809e26;
+    background: #f0f0f0;
+    padding: 11px 16px 13px;
+    color: #b2b3b3;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17.42px;
+    line-height: 21px;
+    width: 100%;
+}
+.form-group .form-inp-group .form-inp-map {
+    position: relative;
+    width: 100%;
+}
+.form-group .form-inp-group .form-inp-map img{
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+.form-group textarea{
+    min-height: 145px;
+    resize: none;
+}
+.form-group-wrap .form__check{
+    display: flex;
+    align-items: start;
+    gap: 11px;
+    margin-bottom: 13px;
+}
+.form-group-wrap .form__check label{
+    color: #434242;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14.33px;
+    line-height: 17px;
+}
+.form-group-wrap .form__check label a{
+    color: rgb(128, 158, 38);
+}
+.form-group-wrap .form-group-btn{
+    width: 100%;
+    height: 45px;
+    padding: 5px 30px 11px;
+    color: rgb(254, 254, 254);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+}
+/* Form sec end */
+
 /* Footer start */
 .footer{
     background: rgb(67, 66, 66);
@@ -991,3 +1253,63 @@ input::-webkit-inner-spin-button {
     line-height: 23px;
 }
 /* Footer end */
+
+
+
+/* MEDIA start */
+@media only screen and (max-width: 1200px) {
+    .header{
+        padding: 8px 0px 12px;
+    }
+    .header .menu-open{
+        display: flex;
+    }
+    .header-content .header__navs{
+        display: none;
+    }
+
+    .contact .contact-content {
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .contact .contact-content {
+        padding: 0 10px;
+    }
+    .contact-form .contact-form-bottom{
+        flex-direction: column;
+    }
+    .contact-info form{
+        width: 100%;
+    }
+    .contact-content .contact-info {
+        gap: 33px;
+    }
+    .contact-info .contact-form {
+        padding-right: 33px;
+    }
+}
+
+@media only screen and (max-width: 776px){
+    .contact-content .contact-info{
+        flex-direction: column;
+    }
+    .contact-info .contact-form {
+        padding-right: 0;
+        border-right: none;
+    }
+    .contact-info .contact-download .contact-download-link{
+        width: 242px;
+        height: 45px;
+    }
+    .contact-content .contact-title h1 b {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .contact-content .contact-title h1 {
+        color: #434242;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
