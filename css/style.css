@@ -1437,6 +1437,14 @@ input::-webkit-inner-spin-button {
         left: 11px;
     }
 
+    .company .container-fluid{
+        padding: 0;
+    }
+    .company-content .company-title-wrap, 
+    .production-content .company-title-wrap{
+        width: 100%;
+    }
+
     .footer .footer-content{
         justify-content: center;
     }
