@@ -658,10 +658,12 @@ circle {
 .contact-form .contact-form-inp{
     display: flex;
     flex-direction: column;
-    gap: 24px;
     margin-bottom: 22px;
     -webkit-row-gap: 30px;
     -moz-row-gap: 30px;
+}
+.contact-form .contact-form-inp .contact-form-inp1{
+    margin-bottom: 24px;
 }
 .contact-form .contact-form-inp input{
     padding: 11px 10px 13px;
@@ -1393,8 +1395,10 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 767px){
     .contact-content .contact-info{
         flex-direction: column;
-        -webkit-row-gap: 33px;
-        -moz-row-gap: 33px;
+        gap: 0;
+    }
+    .contact-content .contact-download{
+        margin-top: 33px;
     }
     .contact-info .contact-form {
         padding-right: 0;
