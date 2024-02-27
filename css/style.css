@@ -2160,9 +2160,11 @@ th {
     }
 
     .footer-contact .footer-item-inn p,
-    .footer-item-contact .footer-contact-link {
+    .footer-item-contact .footer-contact-link,
+    .footer-contact .footer-item-inn .inn-text {
         font-size: 24px;
         line-height: 29px;
+        color: #fefefe !important;
     }
 
     .footer-item-contact .footer-contact-link img {
@@ -2205,10 +2207,9 @@ th {
     .copyright .copyright-texts span {
         display: none;
     }
-    .footer-contact .footer-item-inn p, .footer-item-contact .footer-contact-link {
+
+    .footer-contact .footer-item-inn p,
+    .footer-item-contact .footer-contact-link {
         color: #fefefe !important;
     }
-}
-.footer-contact .footer-item-inn>p {
-    color: red !important;
 }
