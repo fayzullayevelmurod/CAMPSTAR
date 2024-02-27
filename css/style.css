@@ -1389,7 +1389,7 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media only screen and (max-width: 776px){
+@media only screen and (max-width: 767px){
     .contact-content .contact-info{
         flex-direction: column;
         -webkit-row-gap: 33px;
