@@ -2205,5 +2205,10 @@ th {
     .copyright .copyright-texts span {
         display: none;
     }
-
+    .footer-contact .footer-item-inn p, .footer-item-contact .footer-contact-link {
+        color: #fefefe !important;
+    }
+}
+.footer-contact .footer-item-inn>p {
+    color: #fefefe !important;
 }
