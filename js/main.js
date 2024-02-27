@@ -39,6 +39,7 @@ var catalogSlide = new Swiper(".catalogSlide", {
 // Catalog wrap slide
 var catalogWrapSlide = new Swiper(".catalogWrapSlide", {
     spaceBetween: 20,
+    loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
