@@ -518,6 +518,7 @@ circle {
 }
 .catalog-slide-pagination .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
     margin: 0;
+    pointer-events: none;
 }
 .catalog-slide-pagination .swiper-pagination .swiper-pagination-bullet-active::before{
     content: '';

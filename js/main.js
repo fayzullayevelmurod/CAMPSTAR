@@ -48,8 +48,8 @@ var catalogWrapSlide = new Swiper(".catalogWrapSlide", {
         },
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".catalog-slide-pagination .swiper-button-next",
+        prevEl: ".catalog-slide-pagination .swiper-button-prev",
     },
 });
 
