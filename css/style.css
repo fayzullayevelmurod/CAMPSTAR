@@ -1109,11 +1109,11 @@ input::-webkit-inner-spin-button {
     line-height: 39px;
     display: flex;
     align-items: center;
-    gap: 7px;
 }
 
 .description .description-title img {
     display: flex;
+    margin-left: 7px;
 }
 
 .description .description-texts {
