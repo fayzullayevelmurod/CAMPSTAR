@@ -789,12 +789,12 @@ circle {
 .contact-form .contact-form-bottom {
     display: flex;
     align-items: center;
-    gap: 28px;
 }
 
 .contact-form-bottom .contact-form-check {
     display: flex;
     align-items: start;
+    margin-right: 28px;
 }
 
 .contact-form input[type="checkbox"]:checked {
@@ -1605,6 +1605,7 @@ th {
    
     .contact-form-bottom .contact-form-check{
         margin-bottom: 28px;
+        margin-right: 0;
     }
     .contact-info .contact-download .contact-download-link{
         margin-left: 33px;
