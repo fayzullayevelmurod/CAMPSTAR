@@ -422,6 +422,7 @@ circle {
     color: rgb(254, 254, 254);
     font-size: 32px;
     line-height: 39px;
+    padding-left: 48px;
 }
 
 .catalog .catalog-content {
@@ -628,6 +629,7 @@ circle {
 .company .company-content {
     position: relative;
     margin-bottom: 21px;
+    overflow: hidden;
 }
 
 .company-content .company-img{
@@ -755,7 +757,6 @@ circle {
 .contact-content .contact-info {
     display: flex;
     align-items: center;
-    gap: 55px;
     margin-top: 25px;
 }
 
@@ -794,7 +795,6 @@ circle {
 .contact-form-bottom .contact-form-check {
     display: flex;
     align-items: start;
-    gap: 11px;
 }
 
 .contact-form input[type="checkbox"]:checked {
@@ -812,6 +812,7 @@ input[type="checkbox"] {
     font-size: 14.14px;
     line-height: 17px;
     margin-top: -3px;
+    margin-left: 11px;
 }
 
 .contact-form-bottom .contact-form-check label a {
@@ -840,6 +841,7 @@ input[type="checkbox"] {
     width: 312.23px;
     height: 58.15px;
     white-space: nowrap;
+    margin-left: 55px;
 }
 
 input::-webkit-inner-spin-button {
@@ -1032,8 +1034,8 @@ input::-webkit-inner-spin-button {
     gap: 9px;
 }
 
-.product-character .product-character-title img {
-    display: none;
+.product-character .product-character-title img{
+    display: flex;
 }
 
 .product-character .product-character-items {
@@ -1071,7 +1073,6 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
 }
 
 .product-info .product-price-wrap .product-price {
@@ -1081,6 +1082,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     white-space: nowrap;
     line-height: 55px;
+    margin-right: 20px;
 }
 
 .product-info .product-price-wrap .product-price-link {
@@ -1110,7 +1112,7 @@ input::-webkit-inner-spin-button {
 }
 
 .description .description-title img {
-    display: none;
+    display: flex;
 }
 
 .description .description-texts {
@@ -1124,6 +1126,7 @@ input::-webkit-inner-spin-button {
     font-family: "Montserrat", sans-serif;
     font-size: 18.67px;
     line-height: 23px;
+    margin: 0;
 }
 
 /* Product end */
@@ -1240,7 +1243,7 @@ th {
 }
 
 .table>:not(:first-child) {
-    border-top: 0;
+    border-top: 0 !important;
 }
 
 .form-sec {
@@ -1360,16 +1363,19 @@ th {
 .form-group-wrap .form-group {
     display: flex;
     flex-direction: column;
-    gap: 56px;
     margin-bottom: 20px;
 }
 
 .form-group .form-inp-group {
     display: flex;
     flex-direction: column;
-    gap: 19px;
 }
-
+.form-group .form-inp-group input{
+    margin-bottom: 19px;
+}
+.form-group textarea{
+    margin-top: 37px;
+}
 .form-group .form-inp-group input,
 .form-group textarea {
     border: 1.89px solid #809e26;
@@ -1401,7 +1407,6 @@ th {
 .form-group-wrap .form__check {
     display: flex;
     align-items: start;
-    gap: 11px;
     margin-bottom: 13px;
 }
 
@@ -1411,6 +1416,7 @@ th {
     font-size: 14.33px;
     line-height: 17px;
     margin-top: -3px;
+    margin-left: 11px;
 }
 
 .form-group-wrap .form__check label a {
@@ -1473,6 +1479,7 @@ th {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    margin: 0 42px;
 }
 
 .footer-item .footer-item-link {
@@ -1487,8 +1494,11 @@ th {
 .footer-item .footer-item-pay {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-top: 9px;
+        margin-top: 9px;
+}
+
+.footer-item .footer-item-pay .footer-item-link:nth-child(1){
+    margin-right: 12px;
 }
 
 .footer-content .footer-contact {
@@ -1532,8 +1542,11 @@ th {
 .footer-contact .footer-socicial {
     display: flex;
     align-items: center;
-    gap: 9px;
     margin-top: 11px;
+}
+
+.footer-contact .footer-socicial .footer-socicial-link:nth-child(1){
+    margin-right: 9px;
 }
 
 .footer .copyright {
@@ -1584,19 +1597,23 @@ th {
     .contact .contact-content {
         padding: 0 10px;
     }
-
+    
     .contact-form .contact-form-bottom {
         flex-direction: column;
+        gap: 0;
+    }
+   
+    .contact-form-bottom .contact-form-check{
+        margin-bottom: 28px;
+    }
+    .contact-info .contact-download .contact-download-link{
+        margin-left: 33px;
     }
 
     .contact-info form,
     .product-cards .catalog-card .catalog-card__slide,
     .catalog-card .catalog-card__info {
         width: 100%;
-    }
-
-    .contact-content .contact-info {
-        gap: 33px;
     }
 
     .contact-info .contact-form {
@@ -1642,6 +1659,7 @@ th {
     .contact-info .contact-download .contact-download-link {
         width: 242px;
         height: 45px;
+        margin-left: 0;
     }
 
     .contact-content .contact-title h1 b {
@@ -1688,7 +1706,7 @@ th {
     }
 
     .company .container-fluid {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .company-content .company-title-wrap,
@@ -1712,14 +1730,6 @@ th {
         margin-top: 17px;
         flex-direction: column-reverse;
         gap: 50px;
-    }
-
-    .product-character .product-character-title img {
-        display: block;
-    }
-
-    .description .description-title img {
-        display: block;
     }
 
 }
@@ -1807,6 +1817,11 @@ th {
     .swiper-pagination-clickable .swiper-pagination-bullet {
         width: 13px;
         height: 12px;
+    }
+
+    .catalog .catalog-title{
+        text-align: center;
+        padding-left: 0;
     }
 
     .catalog .catalog-title {
@@ -1989,12 +2004,14 @@ th {
         padding: 12px 14px 13px;
     }
 
-    .form-group .form-inp-group {
-        gap: 11px;
+    .form-group .form-inp-group input{
+        margin-bottom: 11px;
+    }
+    .form-group textarea{
+        margin-top: 36px;
     }
 
     .form-group-wrap .form-group {
-        gap: 47px;
         margin-bottom: 9px;
     }
 
@@ -2003,8 +2020,8 @@ th {
         padding: 9px 30px 15px;
         font-size: 21px;
         line-height: 26px;
+        font-weight: 400;
     }
-
 
     .product {
         padding-bottom: 20px;
@@ -2029,11 +2046,6 @@ th {
     .description .description-title {
         font-size: 26px;
         font-weight: 400;
-    }
-
-    .description .description-title img,
-    .product-character .product-character-title img {
-        display: flex;
     }
 
     .product .description {
@@ -2148,6 +2160,9 @@ th {
     .contact-content .contact-title h1 b {
         display: block;
     }
+    .contact-form-bottom .contact-form-btn{
+        font-weight: 400;
+    }
 
     .footer .footer-content {
         flex-direction: column;
@@ -2158,6 +2173,7 @@ th {
     .footer-content .footer-item {
         gap: 8px;
         align-items: center;
+        margin: 0;
     }
 
     .footer-item .footer-item-link {
@@ -2166,8 +2182,11 @@ th {
     }
 
     .footer-item .footer-item-pay {
-        gap: 30px;
         margin-top: 42px;
+    }
+
+    .footer-item .footer-item-pay .footer-item-link:nth-child(1){
+        margin-right: 30px;
     }
 
     .footer-item .footer-item-pay img {
@@ -2221,7 +2240,10 @@ th {
     .footer-contact .footer-socicial {
         order: 3;
         justify-content: center;
-        gap: 24px;
+    }
+
+    .footer-contact .footer-socicial .footer-socicial-link:nth-child(1){
+        margin-right: 24px;
     }
 
     .footer-contact .footer-socicial img {
