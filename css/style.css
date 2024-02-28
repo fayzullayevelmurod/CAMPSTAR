@@ -1690,7 +1690,7 @@ th {
     }
 
     .company-content .company-img,
-    .production-content .production-img img{
+    .production-content .production-img {
         height: 312px;
         object-fit: cover;
     }
