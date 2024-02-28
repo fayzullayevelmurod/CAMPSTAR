@@ -1358,6 +1358,7 @@ th {
     font-family: "Montserrat", sans-serif;
     font-size: 21.84px;
     line-height: 27px;
+    margin-bottom: 0 !important;
 }
 
 .form-group-wrap .form-group {
