@@ -40,10 +40,11 @@ a:focus {
     outline: 0;
     outline: none !important;
     -moz-outline-style: none;
+    color: inherit !important;
 }
 
 a {
-    color: inherit;
+    text-decoration: none !important;
 }
 
 button {
