@@ -42,8 +42,8 @@ a:focus {
     -moz-outline-style: none;
 }
 
-a:hover {
-    color: #FFF;
+a {
+    color: inherit;
 }
 
 button {
