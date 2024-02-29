@@ -15,6 +15,10 @@ $(document).ready(function () {
 // Home sldie
 var homeSlide = new Swiper(".homeSlide", {
     loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -26,6 +30,10 @@ var catalogSlide = new Swiper(".catalogSlide", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
