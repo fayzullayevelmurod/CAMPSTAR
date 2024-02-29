@@ -2292,3 +2292,7 @@ th {
         color: #fefefe !important;
     }
 }
+
+.footer-contact .footer-item-inn li>a {
+    color: red !important;
+}
