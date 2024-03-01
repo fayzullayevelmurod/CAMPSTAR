@@ -525,6 +525,7 @@ circle {
     display: flex;
     align-items: center;
     gap: 11px;
+    margin: 0;
 }
 
 .catalog__card-title p span {
@@ -1847,7 +1848,7 @@ th {
 
     .catalog-card__info .catalog__card-title {
         padding: 10px 21px 6px;
-        gap: 8px;
+        gap: 0;
     }
 
     .catalog__card-title h3 {
@@ -1880,7 +1881,8 @@ th {
     }
 
     .catalog-card .catalog-card__slide {
-        padding: 20px 14px 0px 14px;
+        padding: 23px 0 0 0;
+        width: 50%;
     }
 
     .catalog-card .catalog-card__slide .swiper {
@@ -1889,8 +1891,8 @@ th {
 
     .catalog-card .swiper-slide .catalog-img1 {
         width: 67%;
-        height: 120px;
-        margin-top: 0px;
+        height: 100px;
+        margin-top: 20px;
     }
 
     .catalog-card .swiper-button-prev,
