@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -1848,12 +1851,14 @@ th {
 
     .catalog-card__info .catalog__card-title {
         padding: 10px 21px 6px;
-        gap: 0;
+        gap: 8px;
     }
 
     .catalog__card-title h3 {
         font-size: 15px;
         line-height: 19px;
+        font-weight: 400;
+        margin: 0;
     }
 
     .catalog__card-title p,
@@ -1868,7 +1873,7 @@ th {
     }
 
     .catalog-card__info .catalog-card__item {
-        padding: 2px 20px 4px;
+        padding: 1px 20px 3px;
     }
 
     .catalog-card__info .catalog-card__link {
@@ -1881,8 +1886,8 @@ th {
     }
 
     .catalog-card .catalog-card__slide {
-        padding: 23px 0 0 0;
-        width: 50%;
+        padding: 23px 10px 0 10px;
+        width: 52%;
     }
 
     .catalog-card .catalog-card__slide .swiper {
@@ -2120,7 +2125,7 @@ th {
         padding: 7px 16px 9px 14px;
     }
 
-    .catalog-card__info .catalog-card__link a {
+    .product-cards .catalog-card__info .catalog-card__link a {
         height: 22px;
         font-size: 8px;
         line-height: 10px;
