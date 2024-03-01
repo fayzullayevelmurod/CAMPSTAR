@@ -474,10 +474,11 @@ circle {
 .catalog-card .swiper-slide img {
     height: 194px;
     width: 95%;
+    object-fit: contain;
 }
 
 .catalog-card .swiper-slide .catalog-img1 {
-    width: 75%;
+    width: 65%;
     height: 170px;
     margin-top: 20px;
 }
@@ -1895,7 +1896,7 @@ th {
     }
 
     .catalog-card .swiper-slide .catalog-img1 {
-        width: 67%;
+        width: 70%;
         height: 100px;
         margin-top: 20px;
     }
